@@ -1,0 +1,17 @@
+.navbar {
+    background-color: #3f51b5;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    padding: 0 10rem;
+}
+
+.navbar__fa-icon {
+    font-size: 2rem;
+}
+
+.p-button-text  span {
+    font-size: 1.5rem !important;
+}

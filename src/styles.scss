@@ -1,1 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+/* TYPOGRAPGY SYSTEM 
+        ##FONT SIZES(px):
+        1.4/ 2 / 4 / 8 / 12 / 16 / 24 / 32 /  48 / 64 / 80 / 96 / 28
+        ##FONT WEGHT:
+        400 500 600 700
+        
+        ##LINE HEIGHT:
+        1 1.05 1.6
+        
+        ##SPACE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /  52 /  62 /  74 / 86 /98
+        ##LETTER-SAPACING::after
+        -.5px -.75px
+        
+        ##SHADOWS
+          box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
+       ##COLOR SYSTEM-
+        PRIMARY #E67E22
+        TINTS #FDF2E9 #FAE5D3 #eb984e #45260a
+        GREY #444 #333 #6f6f6f #767676
+        BORDER RADIUS
+        9px 15px
+        */
+
+* {
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0;
+}
+*:focus {
+  outline: none;
+  /* overflow: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 126, 34, 0.05);
+}
+
+html {
+
+  font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3rem 3.2rem;
+  color: #444;
+
+  &__section {
+    margin-bottom: 3rem;
+  }
+}
+
+
+.h1 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  line-height: 1.05;
+  letter-spacing: -.75px;
+}
+
+.field {
+    
+  label, input, button {
+    font-size: 1.5rem !important;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 0 !important;
+  }
+
+  input {
+    color: #555 !important;
+  }
+    
+}
+
+.input--sm {
+  max-width: 9rem;
+}
+
+.date-between-lbl {
+  margin: 0 .5rem;
+}
+
+.p-datatable, .font-size-std, .font-size-std > span {
+  font-size: 1.5rem !important;
+}
+
+.inline-childs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start !important;
+  gap: .5rem;
+}
+
+//Icons Style
+
+
+.fa-icon-red {
+  background-color: red;
+}
+
+.fa-icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-icon-std-sz {
+  height: 4rem;
+
+}
+
+.fa-icon-md-sz {
+  height: 5rem;
+  width: 5rem;
+
+}
+
+
+
+.p-tooltip-text {
+  font-size: 1.4rem !important;
+}
+
