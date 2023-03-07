@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./launch-search.component.scss']
 })
 export class LaunchSearchComponent implements OnInit {
-  title = 'algamoney-ui';
-
   first = 0
   
   formattedCols: any[] = [];

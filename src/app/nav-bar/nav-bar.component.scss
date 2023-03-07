@@ -12,6 +12,46 @@
     font-size: 2rem;
 }
 
+:host ::ng-deep .p-sidebar-close-icon {
+    font-size: 1.5rem;
+    color: #f9f5f4;
+    padding: 3rem;
+}
+
 .p-button-text  span {
     font-size: 1.5rem !important;
+}
+
+
+.sidebar{
+    &__title {
+    
+    margin-top: 5rem;
+    border-bottom: 1px solid #403c3b;
+
+    }
+
+    &__list {
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    list-style: none;
+    
+    
+    li  {
+
+            margin: 3rem 0;
+            a {color: #bbb09d;
+                text-decoration: none;
+            }
+
+            a:hover {color: #f9f5f4;
+            }
+        }
+
+        li:last-of-type{
+            margin-top: 3rem;
+        }
+    
+    }
 }

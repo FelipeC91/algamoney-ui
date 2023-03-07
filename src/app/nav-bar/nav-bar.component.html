@@ -1,6 +1,27 @@
 <nav class="navbar">
-        <button pButton class="fa-icon-container fa-icon-md-sz ">
-            <fa-icon icon="bars" class="navbar__fa-icon"></fa-icon>
-        </button>
-
+    <button pButton class="fa-icon-container fa-icon-md-sz" (click)="showSideBar = true">
+        <fa-icon icon="bars" class="navbar__fa-icon"></fa-icon>
+    </button>
 </nav>
+
+<p-sidebar [(visible)]="showSideBar" position="right" [style]="{width:'30rem', backgroundColor: '#332f22', color: '#f9f5f4',fonSize: '20px'}">
+    <ng-template pTemplate="header">
+
+    </ng-template>
+    <ng-template pTemplate="body">
+        <div class="sidebar__title">
+            <h3 class="h3">Administrador</h3>
+        </div>
+            <ul class="sidebar__list">
+                <li>
+                    <a href="">Lançamentos</a>
+                </li>
+                <li>
+                    <a href="">Pessoas</a>
+                </li>
+                <li>
+                    <a href="">Logout</a>
+                </li>
+            </ul>
+    </ng-template>
+</p-sidebar>
