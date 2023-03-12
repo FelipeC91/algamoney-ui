@@ -32,11 +32,31 @@
                         </th>
                     </tr>
                 </ng-template>
-                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <ng-template pTemplate="body" let-launch>
                     <tr pSelectableRow>
-                        <td *ngFor="let col of columns" >
-                            <span [style.color]="col.field === 'valor' && rowData.tipo === 'DESPESA' ? 'red' : 'inherit'" >
-                                {{rowData[col.field]}}
+                        <td>
+                            <span >
+                                {{launch.pessoa}}
+                            </span>
+                        </td>
+                        <td>
+                            <span >
+                                {{launch.descricao}}
+                            </span>
+                        </td>
+                        <td>
+                            <span >
+                                {{launch.dataVencimento | date: 'dd/MM/yyyy'}}
+                            </span>
+                        </td>
+                        <td>
+                            <span >
+                                {{launch.dataPagamento}}
+                            </span>
+                        </td>
+                        <td>
+                            <span [style.color]=" launch.tipo == 'DESPESA' ? 'red' : 'green' ">
+                                {{launch.valor | currency: 'BRL': true: '1.2-2' }}
                             </span>
                         </td>
                         <td class="inline-childs">
