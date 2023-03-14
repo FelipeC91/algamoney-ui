@@ -12,6 +12,13 @@ import {TableModule} from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
 import {SidebarModule} from 'primeng/sidebar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {SelectButtonModule} from 'primeng/selectbutton';
+import {CalendarModule} from 'primeng/calendar';
+import {CascadeSelectModule} from 'primeng/cascadeselect';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+
+
+
 
 import { FontAwesomeModule, FaIconLibrary, FaConfig } from '@fortawesome/angular-fontawesome';
 import { faPencil, faTrashCan, faBars, faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +28,7 @@ import { PersonSearchComponent } from './person-search/person-search.component';
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { LaunchRegisterComponent } from './launch-register/launch-register.component';
 
 registerLocaleData(ptBr);
 
@@ -29,7 +37,8 @@ registerLocaleData(ptBr);
     AppComponent,
     LaunchSearchComponent,
     NavBarComponent,
-    PersonSearchComponent
+    PersonSearchComponent,
+    LaunchRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +48,10 @@ registerLocaleData(ptBr);
     TableModule,
     TooltipModule,
     SidebarModule,
+    SelectButtonModule,
+    CalendarModule,
+    CascadeSelectModule,
+    InputTextareaModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     FormsModule

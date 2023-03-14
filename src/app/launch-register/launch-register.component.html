@@ -1,0 +1,32 @@
+<div class="container">
+    <form action="" class="" id="new-launch">
+        <h1 class="h1 font-semibold">Novo Lançamento</h1>
+
+        <div class="field">
+            <p-selectButton [options]="stateOptions"  name="typeValue" optionLabel="label" optionValue="value" [(ngModel)]="typeValue"></p-selectButton>
+        </div>
+
+        <div class="formgrid grid">
+            <div class="field col-12 md:col-3">
+                <label for="dataVencimento" style="display: block;">Vencimento</label>
+                <p-calendar name="dataVencimento" [(ngModel)]="dataVencimento" class="surface-border"></p-calendar>
+                <!-- <input type="text" name="dataVencimento" pInputText class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"> -->
+            </div>
+            <div class="field col-12 md:col-3">
+                <label for="dataPagamento" style="display: block;">Pagamento</label>
+                <p-calendar name="dataPagamento" [(ngModel)]="dataPagamento"></p-calendar>
+            </div>
+        </div>
+
+        <div class="formgrid grid">
+            <div class="field col-12 md:col-9">
+                <label for="descricao" style="display: block;">Descrição</label>
+                <input type="text" name="descricao" pInputText class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            </div>
+            <div class="field col-12 md:col-3">
+                <label for="valor" style="display: block;">Valor</label>
+                <input type="text" name="valor" pInputText class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            </div>
+        </div>
+    </form>
+</div>
