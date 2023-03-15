@@ -14,9 +14,9 @@ import {SidebarModule} from 'primeng/sidebar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import {CalendarModule} from 'primeng/calendar';
-import {CascadeSelectModule} from 'primeng/cascadeselect';
+import {DropdownModule} from 'primeng/dropdown';
 import {InputTextareaModule} from 'primeng/inputtextarea';
-
+import {InputNumberModule} from 'primeng/inputnumber';
 
 
 
@@ -50,8 +50,9 @@ registerLocaleData(ptBr);
     SidebarModule,
     SelectButtonModule,
     CalendarModule,
-    CascadeSelectModule,
+    DropdownModule,
     InputTextareaModule,
+    InputNumberModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     FormsModule

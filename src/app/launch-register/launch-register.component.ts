@@ -7,10 +7,29 @@ import { Component } from '@angular/core';
 })
 export class LaunchRegisterComponent {
   stateOptions: any[] = [];
-  typeValue: 'receita' | 'despesa' = 'receita';
+  typeValue: 'RECEITA' | 'DESPESA' = 'RECEITA';
   dataVencimento = new Date();
   dataPagamento = new Date();
+  category = 0;
+  person = '';
+  
+  categories: any[] = [];
+  persons: any[] = [];
+
+  
   constructor() {
-    this.stateOptions = [{label: 'Receita', value: 'receita'}, {label: 'Despesa', value: 'despesa'}];
+    this.stateOptions = [{label: 'Receita', value: 'RECEITA'}, {label: 'Despesa', value: 'DESPESA'}];
+
+    this.categories = [
+      {label: 'Alimentação', value: 1},
+      {label: 'Transporte', value: 2}
+  
+    ]
+
+    this.persons = [
+      { label: 'João da Silva', value: 4 },
+      { label: 'Sebastião Souza', value: 9 },
+      { label: 'Maria Abadia', value: 3 },
+  ]
   }
 }

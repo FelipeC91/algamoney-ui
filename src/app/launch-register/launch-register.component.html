@@ -9,12 +9,11 @@
         <div class="formgrid grid">
             <div class="field col-12 md:col-3">
                 <label for="dataVencimento" style="display: block;">Vencimento</label>
-                <p-calendar name="dataVencimento" [(ngModel)]="dataVencimento" class="surface-border"></p-calendar>
-                <!-- <input type="text" name="dataVencimento" pInputText class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"> -->
+                <p-calendar name="dataVencimento" dateFormat="dd/mm/yy" [readonlyInput]="true" [(ngModel)]="dataVencimento" class="surface-border"></p-calendar>
             </div>
             <div class="field col-12 md:col-3">
-                <label for="dataPagamento" style="display: block;">Pagamento</label>
-                <p-calendar name="dataPagamento" [(ngModel)]="dataPagamento"></p-calendar>
+                <label for="dataPagamento" style="display: block;">{{typeValue === 'RECEITA' ? "Recebimento" : "Pagamento" }}</label>
+                <p-calendar name="dataPagamento" dateFormat="dd/mm/yy" [(ngModel)]="dataPagamento"></p-calendar>
             </div>
         </div>
 
@@ -25,7 +24,30 @@
             </div>
             <div class="field col-12 md:col-3">
                 <label for="valor" style="display: block;">Valor</label>
-                <input type="text" name="valor" pInputText class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                <p-inputNumber inputId="currency-br" mode="currency" currency="BRL" locale="pt-BR"></p-inputNumber>
+            </div>
+        </div>
+
+        <div class="formgrid grid">
+            <div class="field col-12 md:col-3">
+                <label for="category" style="display: block;">Categoria</label>
+                <p-dropdown name="category" placeholder="selecione..." [options]="categories" optionLabel="label" optionValue="value" [showClear]="true"></p-dropdown>
+            </div>
+
+            <div class="field col-12 md:col-3">
+                <label for="dataVencimento" style="display: block;">Pessoa</label>
+                <p-dropdown placeholder="selecione..." optionLabel="label" [options]="persons" [filter]="true" optionValue="value" [showClear]="true"></p-dropdown>
+            </div>
+
+            <div class="field col-12 md:col-12">
+                <label for="" style="display: block;">Observaçã<object data="" type=""></object></label>
+                <textarea [rows]="7" [cols]="30" pInputTextarea [autoResize]="true"></textarea>
+            </div>
+
+            <div class="field inline-childs">
+                <p-button type="submit">Salvar</p-button>
+                <p-button type="button">Novo</p-button>
+                <p-button styleClass="p-button-link">Voltar para pesquisa</p-button>
             </div>
         </div>
     </form>
