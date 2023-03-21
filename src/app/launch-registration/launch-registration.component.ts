@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-launch-register',
-  templateUrl: './launch-register.component.html',
-  styleUrls: ['./launch-register.component.scss']
+  selector: 'app-launch-registration',
+  templateUrl: './launch-registration.component.html',
+  styleUrls: ['./launch-registration.component.scss']
 })
-export class LaunchRegisterComponent {
+export class LaunchRegistrationComponent {
   stateOptions: any[] = [];
   typeValue: 'RECEITA' | 'DESPESA' = 'RECEITA';
-  dataVencimento = new Date();
-  dataPagamento = new Date();
+  dueDate = new Date();
+  paymentDate = new Date();
   category = 0;
   person = '';
+  description = '';
   
   categories: any[] = [];
   persons: any[] = [];

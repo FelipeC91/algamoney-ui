@@ -17,8 +17,8 @@ import {CalendarModule} from 'primeng/calendar';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputNumberModule} from 'primeng/inputnumber';
-
-
+import {InputMaskModule} from 'primeng/inputmask';
+import {MessageModule} from 'primeng/message';
 
 import { FontAwesomeModule, FaIconLibrary, FaConfig } from '@fortawesome/angular-fontawesome';
 import { faPencil, faTrashCan, faBars, faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -28,7 +28,9 @@ import { PersonSearchComponent } from './person-search/person-search.component';
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import { LaunchRegisterComponent } from './launch-register/launch-register.component';
+import { LaunchRegistrationComponent } from './launch-registration/launch-registration.component';
+import { PersonRegistrationComponent } from './person-registration/person-registration.component';
+import { FormMessageComponent } from './form-message/form-message.component';
 
 registerLocaleData(ptBr);
 
@@ -38,7 +40,9 @@ registerLocaleData(ptBr);
     LaunchSearchComponent,
     NavBarComponent,
     PersonSearchComponent,
-    LaunchRegisterComponent
+    LaunchRegistrationComponent,
+    PersonRegistrationComponent,
+    FormMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,8 @@ registerLocaleData(ptBr);
     DropdownModule,
     InputTextareaModule,
     InputNumberModule,
+    InputMaskModule,
+    MessageModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     FormsModule

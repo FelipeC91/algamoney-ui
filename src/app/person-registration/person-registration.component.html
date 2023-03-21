@@ -1,0 +1,81 @@
+<div class="container">
+    <form action="" class="" id="new-launch">
+        <h1 class="h1 font-semibold">Nova Pessoa</h1>
+
+        <div class="formgrid grid">
+            <div class="field col-12 md:col-12">
+                <label for="name" style="display: block;">Nome</label>
+                <input pInputText type="text" name="name" ngModel #name="ngModel" required minlength="5" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+             
+                <app-form-message [field]="name" error="required" message="Informe o nome"></app-form-message>
+                <app-form-message [field]="name" error="minlength" message="Mínimo de 5 caracteres"></app-form-message>
+
+            </div>
+        </div>
+
+        <div class="formgrid grid">
+            <div class="field col-12 md:col-9">
+                <label for="address" style="display: block;">Logradouro</label>
+                <input pInputText type="text" name="address" ngModel #address="ngModel" required class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+              
+                <app-form-message [field]="address" error="required" message="Informe o edereço"></app-form-message> 
+            </div>
+            <div class="field col-12 md:col-3">
+                <label for="number" style="display: block;">Número</label>
+                <input pInputText type="text" name="number" ngModel #number="ngModel" required class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                
+                <app-form-message [field]="number" error="required" message="Informe o número"></app-form-message> 
+            </div>
+        </div>
+
+
+        <div class="formgrid grid">
+            <div class="field col-12 md:col-4">
+                <label for="complement" style="display: block;">Complemeto</label>
+                <input pInputText type="text" name="complement" ngModel class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <label for="neighborhood" style="display: block;">Bairro</label>
+                <input pInputText type="text" name="neighborhood" ngModel #neighborhood="ngModel" required class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            
+                <app-form-message [field]="neighborhood" error="required" message="Informe o bairro"></app-form-message> 
+
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <label for="cep" style="display: block;">Cep</label>
+                <p-inputMask name="cep" mask="99999-999" ngModel #cep="ngModel"></p-inputMask>
+
+                <app-form-message [field]="cep" error="required" message="Informe o Cep"></app-form-message>      
+            </div>
+        </div>
+
+        <div class="formgrid grid">
+            <div class="field col-12 md:col-6">
+                <label for="city" style="display: block;">Cidade</label>
+                <input pInputText type="text" name="city" ngModel  #city="ngModel" required class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            
+                <app-form-message [field]="city" error="required" message="Informe a cidade"></app-form-message>      
+
+            </div>
+            <div class="field col-12 md:col-6">
+                <label for="state" style="display: block;">Estado</label>
+                <p-dropdown name="state" ngModel #state="ngModel" placeholder="selecione..." [options]="states" optionLabel="label" optionValue="value" [filter]="true" [showClear]="true"></p-dropdown>
+            
+                <app-form-message [field]="state" error="required" message="Informe o estado"></app-form-message>      
+
+            </div>
+        </div>
+
+        <div class="formgrid grid">
+            <div class="field inline-childs">
+                <p-button type="submit">Salvar</p-button>
+                <p-button type="button">Novo</p-button>
+                <a href="">
+                    <p-button styleClass="p-button-link">Voltar para pesquisa</p-button>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
