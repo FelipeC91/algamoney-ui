@@ -1,0 +1,30 @@
+<div class="container">
+    <section class="container__section">
+        <h1 class="h1 font-semibold">Lançamentos</h1>
+        <div class="field">
+            <label for="descricao">Descrição</label>
+            <input id="descricao" type="text" pInputText class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field">
+            <label for="" style="display: block;">Vencimento</label>
+            <input type="text" pInputText class="input--sm text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <label for="" class="margin-between-lbls">até</label>
+            <input type="text" pInputText class="input--sm text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field">
+            <button pButton type="submit">Pesquisar</button>
+        </div>
+    </section>
+    
+    <section class="container__section">
+        <app-launch-table [launches]="launches"></app-launch-table>
+    </section>
+    
+    <div class="field">
+        <button pButton type="submit">
+            <fa-icon icon="plus" class="fa-icon-style margin-between-lbls"></fa-icon>
+            <span>Novo Lançamento</span>
+        </button>
+    </div>
+
+</div>

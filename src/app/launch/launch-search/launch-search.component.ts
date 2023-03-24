@@ -6,12 +6,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './launch-search.component.html',
   styleUrls: ['./launch-search.component.scss']
 })
-export class LaunchSearchComponent implements OnInit {
+export class LaunchSearchComponent{
 
-  first = 0
-  
-  formattedCols: any[] = [];
-  
   launches = [
     {  tipo: 'DESPESA', descricao: 'Compra de pão', dataVencimento: new Date(2017,6 -1,30),
     dataPagamento: null, valor: 4.55, pessoa: 'Padaria do José' },
@@ -28,19 +24,6 @@ export class LaunchSearchComponent implements OnInit {
     { tipo: 'DESPESA', descricao: 'Mensalidade musculação', dataVencimento: new Date(2017,7-1,13),
     dataPagamento: null, valor: 180, pessoa: 'Academia Top' }
   ];
-  
-  rows = this.launches.length
-  
-  ngOnInit(): void {
-    this.formattedCols = [
-      {field: 'pessoa', header: 'Pessoa'},
-      {field: 'descricao', header: 'Descrição'},
-      {field: 'dataVencimento', header: 'Data de Vencimento'},
-      {field: 'dataPagamento', header: 'Data de Pagamento'},
-      {field: 'valor', header: 'Valor'},
- //     {field: 'tipo', header: 'Tipo'}
-    ];
-  }
-  
+
   
 }

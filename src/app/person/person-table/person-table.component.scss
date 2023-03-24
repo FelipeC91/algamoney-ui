@@ -1,0 +1,11 @@
+:host ::ng-deep .p-paginator,
+ :host ::ng-deep .p-button-icon,
+  :host ::ng-deep .p-dropdown,
+  :host ::ng-deep .fa-icon-style
+ {
+    font-size: 1.4rem !important;
+}
+
+:host ::ng-deep .fa-icon-style {
+    font-size: 1.3rem !important;
+}

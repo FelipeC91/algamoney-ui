@@ -1,0 +1,26 @@
+<div class="container">
+    <section class="container__section">
+        <h1 class="h1 font-semibold">Pessoas</h1>
+
+        <div class="field">
+            <label for="descricao">Nome</label>
+            <input id="descricao" type="text" pInputText class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+    
+        <div class="field">
+            <button pButton type="submit">Pesquisar</button>
+        </div>
+    </section>
+    
+    <section class="container__section">
+        <app-person-table [persons]="persons"></app-person-table>
+    </section>
+
+    <div class="field">
+        <button pButton type="submit">
+            <fa-icon icon="plus" class="fa-icon-style margin-between-lbls"></fa-icon>
+            <span>Nova Pessoa</span>
+        </button>
+    </div>
+
+</div>

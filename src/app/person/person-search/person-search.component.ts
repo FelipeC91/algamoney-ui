@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./person-search.component.scss']
 })
 export class PersonSearchComponent {
-  first = 0
-  
-  formattedCols: any[] = [];
   
   persons = [
     { nome: 'Manoel Pinheiro', cidade: 'Uberlândia', estado: 'MG', ativo: true },
@@ -19,14 +16,7 @@ export class PersonSearchComponent {
     { nome: 'Paula Maria', cidade: 'Uberlândia', estado: 'MG', ativo: true }
   ];
   
-  rows = this.persons.length
 
-  ngOnInit(): void {
-    this.formattedCols = [
-      {field: 'nome', header: 'Nome'},
-      {field: 'cidade', header: 'Cidade'},
-      {field: 'estado', header: 'Estado'},
-      {field: 'ativo', header: 'Status'},
-    ];
-  }
+
+ 
 }

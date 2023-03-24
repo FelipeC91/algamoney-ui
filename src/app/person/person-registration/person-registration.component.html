@@ -39,7 +39,7 @@
                 <label for="neighborhood" style="display: block;">Bairro</label>
                 <input pInputText type="text" name="neighborhood" ngModel #neighborhood="ngModel" required class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
             
-                <app-form-message [field]="neighborhood" error="required" message="Informe o bairro"></app-form-message> 
+                <!-- <app-form-message [field]="neighborhood" error="required" message="Informe o bairro"></app-form-message>  -->
 
             </div>
 
@@ -47,7 +47,7 @@
                 <label for="cep" style="display: block;">Cep</label>
                 <p-inputMask name="cep" mask="99999-999" ngModel #cep="ngModel"></p-inputMask>
 
-                <app-form-message [field]="cep" error="required" message="Informe o Cep"></app-form-message>      
+                <!-- <app-form-message [field]="cep" error="required" message="Informe o Cep"></app-form-message>       -->
             </div>
         </div>
 
@@ -56,14 +56,14 @@
                 <label for="city" style="display: block;">Cidade</label>
                 <input pInputText type="text" name="city" ngModel  #city="ngModel" required class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
             
-                <app-form-message [field]="city" error="required" message="Informe a cidade"></app-form-message>      
+                <!-- <app-form-message [field]="city" error="required" message="Informe a cidade"></app-form-message>       -->
 
             </div>
             <div class="field col-12 md:col-6">
                 <label for="state" style="display: block;">Estado</label>
                 <p-dropdown name="state" ngModel #state="ngModel" placeholder="selecione..." [options]="states" optionLabel="label" optionValue="value" [filter]="true" [showClear]="true"></p-dropdown>
             
-                <app-form-message [field]="state" error="required" message="Informe o estado"></app-form-message>      
+                <!-- <app-form-message [field]="state" error="required" message="Informe o estado"></app-form-message>       -->
 
             </div>
         </div>
